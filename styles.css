@@ -2861,83 +2861,118 @@ select optgroup {
         min-height: 56px !important;
     }
 }
+
 /* =======================================================
-   MOBILE NAV — FINAL STACKING / VISIBILITY FIX
+   MOBILE NAV — HARD OVERRIDE VISIBILITY FIX
    ======================================================= */
 
 @media (max-width: 900px) {
+    #universal-navbar,
+    #universal-navbar.main-navbar,
+    nav#universal-navbar,
     .main-navbar {
-        position: sticky;
-        top: 0;
-        z-index: 99999 !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 999999 !important;
         overflow: visible !important;
     }
 
+    #universal-navbar .main-navbar,
+    .main-navbar .navbar-container,
     .navbar-container {
-        position: relative;
-        z-index: 2;
+        position: relative !important;
         overflow: visible !important;
+        z-index: 999999 !important;
     }
 
+    #mobile-menu,
     .menu-toggle {
-        position: relative;
-        z-index: 100001 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        z-index: 1000001 !important;
     }
 
+    #nav-links,
     .nav-links {
-        position: absolute;
-        top: calc(100% + 1px);
-        left: 0;
-        right: 0;
-        z-index: 100000 !important;
-        display: flex !important;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        overflow: hidden;
-        background: linear-gradient(180deg, rgba(9, 17, 29, 0.99), rgba(18, 31, 48, 0.99));
-        border-bottom: 1px solid rgba(248, 245, 239, 0.08);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
-        transition:
-            max-height 0.38s ease,
-            opacity 0.25s ease,
-            visibility 0.25s ease;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        background: linear-gradient(180deg, rgba(9, 17, 29, 0.995), rgba(18, 31, 48, 0.995)) !important;
+        border-top: 1px solid rgba(248, 245, 239, 0.08) !important;
+        border-bottom: 1px solid rgba(248, 245, 239, 0.08) !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.30) !important;
+        z-index: 1000000 !important;
+
+        display: none !important;
+        max-height: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: none !important;
+        overflow: visible !important;
+        transform: none !important;
     }
 
+    #nav-links.active,
     .nav-links.active {
-        max-height: 420px;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
+        display: flex !important;
+        pointer-events: auto !important;
     }
 
+    #nav-links li,
     .nav-links li {
-        display: block;
-        width: 100%;
-        border-top: 1px solid rgba(248, 245, 239, 0.06);
+        display: block !important;
+        width: 100% !important;
+        border-top: 1px solid rgba(248, 245, 239, 0.06) !important;
     }
 
+    #nav-links li:first-child,
+    .nav-links li:first-child {
+        border-top: 0 !important;
+    }
+
+    #nav-links li a,
     .nav-links li a {
         display: flex !important;
-        align-items: center;
-        width: 100%;
-        min-height: 58px;
-        padding: 0 28px;
+        align-items: center !important;
+        width: 100% !important;
+        min-height: 58px !important;
+        padding: 0 28px !important;
+        border-radius: 0 !important;
         color: rgba(248, 245, 239, 0.92) !important;
-        background: transparent;
-        text-decoration: none;
-        border-radius: 0;
-        position: relative;
-        z-index: 1;
+        background: transparent !important;
+        text-decoration: none !important;
+        position: relative !important;
+        z-index: 1 !important;
     }
 
+    #nav-links li a:hover,
+    #nav-links li a:focus,
     .nav-links li a:hover,
     .nav-links li a:focus {
         color: #ffffff !important;
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(255, 255, 255, 0.04) !important;
+    }
+
+    .hero-section,
+    .hero-section .overlay,
+    .hero-content-wrapper,
+    .info-box,
+    .contact-card,
+    .box {
+        z-index: 1 !important;
+    }
+
+    .hero-section .overlay {
+        pointer-events: none !important;
     }
 }
