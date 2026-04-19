@@ -2803,3 +2803,35 @@ select optgroup {
     display: flex;
     align-items: center;
 }
+/* =======================================================
+   CONTACT PAGE — MOBILE CTA SPACING & CENTER FIX
+   ======================================================= */
+
+@media (max-width: 680px) {
+
+    /* Contenedor de acciones */
+    .contact-actions {
+        margin-top: 28px !important;
+        padding-top: 20px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        gap: 14px;
+    }
+
+    /* Botones */
+    .contact-actions .btn-reservation,
+    .contact-actions .btn-whatsapp {
+        margin-top: 0 !important;
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Extra aire entre texto y CTA */
+    .contact-card-top {
+        padding-bottom: 6px;
+    }
+}
