@@ -2684,40 +2684,82 @@ select optgroup {
     }
 }
 /* =======================================================
-   RESERVATIONS — MOBILE FIX FOR DATE / TIME INPUTS
+   RESERVATIONS — FINAL MOBILE FIX FOR DATE / TIME
    ======================================================= */
 
-.reservations-page .reservation-form .form-group input[type="date"],
-.reservations-page .reservation-form .form-group input[type="time"] {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    display: block;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-/* iPhone / small screens */
-@media (max-width: 680px) {
-    .reservations-page .reservation-form .form-group input[type="date"],
-    .reservations-page .reservation-form .form-group input[type="time"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-        font-size: 16px;
+@media (max-width: 900px) {
+    .reservations-page .reservation-form {
+        grid-template-columns: minmax(0, 1fr) !important;
     }
 
-    .reservations-page .reservation-form .form-group {
-        min-width: 0;
+    .reservations-page .reservation-form > *,
+    .reservations-page .reservation-form .form-group,
+    .reservations-page .reservation-form .full-width,
+    .reservations-page .reservation-form .menu-details-container {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .reservations-page .reservation-form .form-group input,
+    .reservations-page .reservation-form .form-group select,
+    .reservations-page .reservation-form .form-group textarea,
+    .reservations-page .reservation-form .menu-detail-item select {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .reservations-page .reservation-form .form-group input[type="date"],
+    .reservations-page .reservation-form .form-group input[type="time"] {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        inline-size: 100% !important;
+        min-inline-size: 0 !important;
+        max-inline-size: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .reservations-page .hero-content-wrapper,
+    .reservations-page .info-box,
+    .reservations-page .reservation-form {
+        min-width: 0 !important;
+        max-width: 100% !important;
     }
 
     .reservations-page .reservation-form {
-        overflow: hidden;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .reservations-page .reservation-form > * {
+        min-width: 0 !important;
+    }
+
+    .reservations-page .reservation-form .form-group {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .reservations-page .reservation-form .form-group input[type="date"],
+    .reservations-page .reservation-form .form-group input[type="time"] {
+        font-size: 16px !important;
+        line-height: 1.2 !important;
     }
 }
+
+/* Safari iOS */
 .reservations-page .reservation-form .form-group input[type="date"]::-webkit-date-and-time-value,
 .reservations-page .reservation-form .form-group input[type="time"]::-webkit-date-and-time-value {
     text-align: left;
