@@ -2543,3 +2543,49 @@ select optgroup {
         max-width: 280px;
     }
 }
+/* =======================================================
+   FOOTER — MOBILE CENTER ALIGN
+   ======================================================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        padding: 0;
+    }
+
+    .footer-section h4 {
+        text-align: center;
+    }
+
+    .footer-section p {
+        text-align: center;
+    }
+
+    .footer-section ul {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-section ul li {
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
