@@ -2756,3 +2756,50 @@ select optgroup {
         filter: invert(1);
     }
 }
+/* =======================================================
+   RESERVATIONS — VERTICAL ALIGN FIX (DATE / TIME)
+   ======================================================= */
+
+.reservations-page .reservation-form .form-group input[type="date"],
+.reservations-page .reservation-form .form-group input[type="time"] {
+    height: 56px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+/* Safari / iOS internal text */
+.reservations-page .reservation-form .form-group input[type="date"]::-webkit-date-and-time-value,
+.reservations-page .reservation-form .form-group input[type="time"]::-webkit-date-and-time-value {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+/* Editable wrapper */
+.reservations-page .reservation-form .form-group input[type="date"]::-webkit-datetime-edit,
+.reservations-page .reservation-form .form-group input[type="time"]::-webkit-datetime-edit {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0;
+}
+
+/* Fields wrapper */
+.reservations-page .reservation-form .form-group input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+.reservations-page .reservation-form .form-group input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+/* Inputs internos */
+.reservations-page .reservation-form .form-group input[type="date"]::-webkit-datetime-edit-text,
+.reservations-page .reservation-form .form-group input[type="date"]::-webkit-datetime-edit-day-field,
+.reservations-page .reservation-form .form-group input[type="date"]::-webkit-datetime-edit-month-field,
+.reservations-page .reservation-form .form-group input[type="date"]::-webkit-datetime-edit-year-field,
+.reservations-page .reservation-form .form-group input[type="time"]::-webkit-datetime-edit-hour-field,
+.reservations-page .reservation-form .form-group input[type="time"]::-webkit-datetime-edit-minute-field {
+    display: flex;
+    align-items: center;
+}
