@@ -2804,34 +2804,60 @@ select optgroup {
     align-items: center;
 }
 /* =======================================================
-   CONTACT PAGE — MOBILE CTA SPACING & CENTER FIX
+   CONTACT PAGE — MOBILE BUTTON SPACING & FULL-WIDTH FIX
    ======================================================= */
 
 @media (max-width: 680px) {
+    .contact-grid-container {
+        gap: 24px;
+    }
 
-    /* Contenedor de acciones */
-    .contact-actions {
-        margin-top: 28px !important;
-        padding-top: 20px !important;
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Como en tu HTML los botones están sueltos dentro de .contact-card,
+       apuntamos directamente a ellos */
+    .contact-card > .btn-reservation,
+    .contact-card > .btn-whatsapp {
         display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 58px !important;
+        margin-top: 28px !important;
         justify-content: center !important;
         align-items: center !important;
-        flex-direction: column !important;
-        gap: 14px;
+        text-align: center !important;
+        white-space: nowrap !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        line-height: 1.2 !important;
     }
 
-    /* Botones */
-    .contact-actions .btn-reservation,
-    .contact-actions .btn-whatsapp {
-        margin-top: 0 !important;
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-        text-align: center;
+    /* El botón de WhatsApp lleva icono; evitamos saltos raros */
+    .contact-card > .btn-whatsapp {
+        gap: 10px !important;
     }
 
-    /* Extra aire entre texto y CTA */
-    .contact-card-top {
-        padding-bottom: 6px;
+    /* Un poco más de aire antes del botón del segundo bloque */
+    .contact-card .contact-details-list + .btn-whatsapp {
+        margin-top: 30px !important;
+    }
+
+    /* Si hay follow-up box antes del botón, añade separación más limpia */
+    .contact-card .follow-up-box + .btn-reservation,
+    .contact-card .follow-up-box + .btn-whatsapp {
+        margin-top: 28px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card > .btn-reservation,
+    .contact-card > .btn-whatsapp {
+        font-size: 0.8rem !important;
+        letter-spacing: 0.14em !important;
+        min-height: 56px !important;
     }
 }
