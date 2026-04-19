@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cork Kitchen | Restaurante para Grupos em Lisboa | Group Dining</title>
+    <meta name="description"
+        content="Cozinha tradicional moderna e menus para grupos em Lisboa. Opções vegetarianas, carnes e bacalhau. Restaurante para grupos grandes y eventos. Modern Portuguese cuisine and group bookings.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <script src="scripts.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+
+            <div class="image-container">
+                <img src="fotos_cork/cork1.png" alt="CORK KITCHEN RESTAURANT">
+            </div>
+
+            <div class="description">
+                <h1>CORK KITCHEN</h1>
+                <p>An intimate restaurant in downtown Lisbon where Portuguese flavors meet sophistication. Designed for
+                    small groups, Cork Kitchen blends authentic recipes with modern presentation, always paired with
+                    great wine and warm hospitality.</p>
+                <h3>CAPACITY & SPACES</h3>
+                <p>Dining Hall: ≈20 Pax</p>
+                <h3>GROUP MENUS</h3>
+                <p>Customizable group menus with starter, main course, dessert and drinks included.</p>
+            </div>
+
+        </div>
+
+        <!-- MENUS + CONDITIONS -->
+        <div class="menu-conditions">
+
+            <div class="box">
+                <h2 class="section-title">Menus</h2>
+                <div class="slider" id="menuSlider">
+                    <div class="slides">
+
+                        <!-- MENU 1 -->
+                        <div class="slide">
+                            <h3>MENU 1</h3>
+                            <p><strong>Couvert:</strong> Bread, butter and olives.</p>
+                            <p><strong>Starter:</strong> Fresh salad to share (1 per 4 guests).</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>Seabass fillet on a bed of spinach and sautéed potatoes.</p>
+                            <p>Sliced pork “secretos” with garlic and parsley sauce, served with mashed potatoes.</p>
+                            <p><strong>Dessert:</strong></p>
+                            <p>Pudding.</p>
+                            <p><strong>DRINKS:</strong> Water or soft drink or glass of red or white wine (1 per
+                                person).</p>
+                            <p><strong>Price:</strong> €27</p>
+                        </div>
+                        <!-- MENU 2 -->
+                        <div class="slide">
+                            <h3>MENU 2</h3>
+                            <p><strong>Couvert:</strong> Bread, olive butter, shrimp croquette “à Guilho”.</p>
+                            <p><strong>Starter:</strong> Chestnut soup.</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>“Bacalhau à Lagareiro” (traditional roasted cod with olive oil and potatoes).</p>
+                            <p>“Carolino da Terra” – Stewed carolino rice with black pork ribs, chouriço and red wine.
+                            </p>
+                            <p><strong>Dessert:</strong></p>
+                            <p>Chocolate Mousse.</p>
+                            <p><strong>DRINKS:</strong> Water or soft drink or glass of red or white wine (1 per
+                                person).</p>
+                            <p><strong>Price:</strong> €33</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="moveSlide(-1, 'menuSlider')">Prev</button>
+                    <button onclick="moveSlide(1, 'menuSlider')">Next</button>
+                </div>
+            </div>
+
+            <!-- CONDITIONS -->
+            <div class="box">
+                <h2 class="section-title">Conditions</h2>
+                <p>Valid for groups with minimum 15 pax.</p>
+                <p>Series price for 20 groups/year.</p>
+                <p>Same menu for whole group (except dietary restrictions).</p>
+                <p>Extras available at additional cost.</p>
+                <p>All prices include VAT.</p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- GALLERY -->
+        <div class="box">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder para fotos faltantes -->
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span>
+        </div>
+
+    </div>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>

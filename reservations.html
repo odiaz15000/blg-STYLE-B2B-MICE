@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <title>Reserva de Mesa y Menús para Grupos en Lisboa | Group Restaurant Booking</title>
+    <meta name="description"
+        content="Reserve a sua mesa e menus para grupos em Lisboa. Especialistas em reservas de restaurantes para agências, jantares de fado e workshops. Group restaurant reservations in Lisbon.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description"
+        content="Reserva restaurantes para grupos grandes en Lisboa. Gestão de grupos, Fado & Workshops. Réservez pour groupes. Gruppenreservierung. Group reservations in Lisbon.">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="alternate" href="https://tuusuario.github.io/tu-repositorio/" hreflang="x-default" />
+    <link rel="alternate" href="https://tuusuario.github.io/tu-repositorio/" hreflang="en" />
+    <link rel="alternate" href="https://tuusuario.github.io/tu-repositorio/" hreflang="es" />
+    <link rel="alternate" href="https://tuusuario.github.io/tu-repositorio/" hreflang="fr" />
+    <link rel="alternate" href="https://tuusuario.github.io/tu-repositorio/" hreflang="de" />
+    <link rel="alternate" href="https://tuusuario.github.io/tu-repositorio/" hreflang="it" />
+    <link rel="alternate" href="https://tuusuario.github.io/tu-repositorio/" hreflang="nl" />
+    <script src="scripts.js" defer></script>
+</head>
+
+<body class="reservations-page">
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <section class="hero-section res-bg">
+        <div class="overlay"></div>
+
+        <div class="hero-content-wrapper">
+            <div class="info-box stack-box reveal delay-1">
+                <h1>Group Reservations</h1>
+                <div class="divider"></div>
+                <p>Please fill out the form below. Our team will contact you to confirm your booking.</p>
+
+                <form id="resForm" action="https://api.web3forms.com/submit" method="POST" class="reservation-form"
+                    autocomplete="off">
+                    <input type="hidden" name="access_key" value="d1a54374-bc62-4fc2-bfd1-db50557606a1">
+
+                    <div class="section-title">Reservation Details</div>
+
+                    <div class="form-group">
+                        <label>DATE (DD/MM/YYYY):</label>
+                        <input type="date" name="01_DATE" ID="fecha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>RESTAURANT:</label>
+                        <select name="02_RESTAURANT" id="restaurantSelect" required>
+                            <option value="" disabled selected hidden>Choose a restaurant</option>
+                            <option value="ALDEA">ALDEA</option>
+                            <option value="BRASA D’OURO">BRASA D’OURO</option>
+                            <option value="CORK KITCHEN">CORK KITCHEN</option>
+                            <option value="COZINHA D’AVÓ CELESTE">COZINHA D’AVÓ CELESTE</option>
+                            <option value="CUCINA DI FAMIGLIA">CUCINA DI FAMIGLIA</option>
+                            <option value="EL CLAN">EL CLAN</option>
+                            <option value="NATA DE LISBOA">NATA DE LISBOA</option>
+                            <option value="NICOLA CAFÉ">NICOLA CAFÉ</option>
+                            <option value="PATA NEGRA">PATA NEGRA - STEAKHOUSE</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>TIME (24H):</label>
+                        <input type="time" name="03_TIME" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>AGENCY NAME:</label>
+                        <input type="text" name="04_AGENCY_NAME">
+                    </div>
+
+                    <div class="form-group">
+                        <label>AGENCY EMAIL:</label>
+                        <input type="email" name="05_AGENCY_EMAIL">
+                    </div>
+
+                    <div class="form-group">
+                        <label>AGENCY PHONE NUMBER:</label>
+                        <input type="tel" name="06_AGENCY_PHONE">
+                    </div>
+
+                    <div class="form-group">
+                        <label>AGENCY AGENT NAME:</label>
+                        <input type="text" name="07_AGENT_NAME">
+                    </div>
+
+                    <div class="form-group">
+                        <label>REFERENCE (REF):</label>
+                        <input type="text" name="08_REF">
+                    </div>
+
+                    <div class="form-group">
+                        <label>GUESTS (PAX):</label>
+                        <input type="text" name="09_PAX" required placeholder="e.g. 20+1">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>MENU OPTION:</label>
+                        <select name="10_MENU_OPTION" id="menuSelect" required>
+                            <option value="" disabled selected hidden>Please select a restaurant first</option>
+                        </select>
+                    </div>
+
+                    <div id="menu1Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="M1_NAME" value="MENU 1: GROUPS">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Bread, butter and olives</p>
+                            <input type="hidden" name="couvert_1" value="Bread, butter and olives">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>STARTER (Select one):</label>
+                            <select name="m1_starter">
+                                <option value="" disabled selected hidden>Choose a starter</option>
+                                <option value="Vegetable soup">Vegetable soup</option>
+                                <option value="Mixed salad">Mixed salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="m1_main">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Codfish with cream">Codfish with cream</option>
+                                <option value="Hake fillets with rice and salad">Hake fillets with rice and salad
+                                </option>
+                                <option value="Pork loin with roasted potatoes and rice">Pork loin with roasted potatoes
+                                    and rice</option>
+                                <option value="Roasted chicken with fries and salad">Roasted chicken with fries and
+                                    salad</option>
+                                <option value="Vegetarian: Vegetable rice">Vegetarian: Vegetable rice</option>
+                                <option value="Vegetarian: Veggie burger with fries and salad">Vegetarian: Veggie burger
+                                    with fries and salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Dessert (Fixed):</label>
+                            <p>House sweet (Crème brûlée with chocolate)</p>
+                            <input type="hidden" name="m1_dessert" value="House sweet (Crème brûlée with chocolate)">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drinks (Fixed):</label>
+                            <p>Water, 1 drink (beer, soda), or white/red wine (1 glass per person)</p>
+                            <input type="hidden" name="drink_1"
+                                value="Water, 1 drink (beer, soda), or white/red wine (1 glass per person)">
+                        </div>
+
+                        <div class="price-tag"><span>Price: 23,00€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_1" value="Price: 23,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="menu2Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="M2_NAME" value="MENU 2: FADO">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Bread, butter, olives, cheese</p>
+                            <input type="hidden" name="couvert_2" value="Bread, butter and olives">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>STARTER (Select one):</label>
+                            <select name="m2_starter">
+                                <option value="" disabled selected hidden>Choose a starter</option>
+                                <option value="Vegetable soup">Vegetable soup</option>
+                                <option value="Mixed salad">Mixed salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="m2_main">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Monkfish rice with prawns">Monkfish rice with prawns</option>
+                                <option value="Iberian pork loin stuffed with farinheira">Iberian pork loin stuffed with
+                                    farinheira</option>
+                                <option value="Veal escalopes with mushrooms in Port wine">Veal escalopes with mushrooms
+                                    in Port wine</option>
+                                <option value="Vegetarian: Vegetable rice">Vegetarian: Vegetable rice</option>
+                                <option value="Vegetarian: Tofu stew">Vegetarian: Tofu stew</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DESSERT (Select one):</label>
+                            <select name="m2_dessert">
+                                <option value="" disabled selected hidden>Choose a dessert</option>
+                                <option value="House sweet (Crème brûlée with chocolate)">House sweet (Crème brûlée with
+                                    chocolate)</option>
+                                <option value="Chocolate mousse">Chocolate mousse</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drinks (Fixed):</label>
+                            <p>Water, 1 drink (beer, soda), or white/red wine (1 glass per person)</p>
+                            <input type="hidden" name="drink_2"
+                                value="Water, 1 drink (beer, soda), or white/red wine (1 glass per person)">
+                        </div>
+
+                        <div class="price-tag"><span>Price: 27,00€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_2" value="Price: 27,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="menu3Details" class="menu-details-container full-width">
+                        <div class="menu-detail-item mode-selector">
+                            <label>MODALITY:</label>
+                            <select id="m3_mode" name="m3_modality">
+                                <option value="1 Main Course">1 Main Course (45,00€)</option>
+                                <option value="2 Main Courses">2 Main Courses (60,00€)</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item"><label>Couvert (Fixed):</label>
+                            <p>Bread, butter, olives, cheese, smoked pork sausages</p>
+                            <input type="hidden" name="couvert_3"
+                                value="Bread, butter, olives, cheese, smoked pork sausages">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>STARTER (Select one):</label>
+                            <select name="m3_starter">
+                                <option value="" disabled selected hidden>Choose a starter</option>
+                                <option value="Garlic prawns">Garlic prawns</option>
+                                <option value="Mussels à espanhola">Mussels “à espanhola”</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>SOUP (Select one):</label>
+                            <select name="m3_soup">
+                                <option value="" disabled selected hidden>Choose a soup</option>
+                                <option value="Tomato soup">Tomato soup</option>
+                                <option value="Cream of coriander soup">Cream of coriander soup</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label id="label_m3_main1">Main Course:</label>
+                            <select name="m3_main1">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Salmon fillet with roasted potatoes and sautéed vegetables">Salmon fillet
+                                    with roasted potatoes and sautéed vegetables
+                                </option>
+                                <option value="Roasted national veal with mushrooms in madeira wine">Roasted national
+                                    veal with mushrooms in madeira wine</option>
+                                <option value="Vegetarian: Vegetable rice">Vegetarian: Vegetable rice</option>
+                                <option value="Vegetarian: Tofu stew">Vegetarian: Tofu stew</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item" id="container_m3_main2" style="display:none;">
+                            <label>Second Main Course:</label>
+                            <select name="m3_main2">
+                                <option value="" disabled selected hidden>Choose second main course</option>
+                                <option value="Salmon fillet with roasted potatoes and sautéed vegetables">Salmon fillet
+                                    with roasted potatoes and sautéed vegetables
+                                </option>
+                                <option value="Roasted national veal with mushrooms in madeira wine">Roasted national
+                                    veal with mushrooms in madeira
+                                    wine</option>
+                                <option value="Vegetarian: Vegetable rice">Vegetarian: Vegetable rice</option>
+                                <option value="Vegetarian: Tofu stew">Vegetarian: Tofu stew</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DESSERT (Select one):</label>
+                            <select name="m3_dessert">
+                                <option value="" disabled selected hidden>Choose a dessert</option>
+                                <option value="House sweet (Crème brûlée with chocolate)">House sweet (Crème brûlée with
+                                    chocolate)</option>
+                                <option value="Chocolate mousse">Chocolate mousse</option>
+                                <option value="Egg pudding">Egg pudding</option>
+                                <option value="Farofias">Farofias</option>
+                                <option value="Mango mousse">Mango mousse</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item"><label>Drinks (Fixed):</label>
+                            <p>Water, beer, soft drinks, orange juice, white/red wine</p>
+                            <input type="hidden" name="drink_4"
+                                value="Water, beer, soft drinks, orange juice, white/red wine">
+                        </div>
+
+                        <div class="price-tag">
+                            <span id="m3_price_display">Price: 45,00€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" id="m3_price_input" name="m3_final_price" value="45,00€">
+                        </div>
+                    </div>
+
+                    <div id="menu4Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="M4_NAME" value="MENU 4: STUDENTS">-->
+
+                        <div class="menu-detail-item"><label>Couvert (Fixed):</label>
+                            <p>Bread, butter</p>
+                            <input type="hidden" name="couvert_5" value="Bread, butter">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Main Course (Select one):</label>
+                            <select name="m4_main">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Codfish pastries with tomato rice and salad">Codfish pastries with tomato
+                                    rice and salad</option>
+                                <option value="Roasted chicken with baked potatoes and rice">Roasted chicken with baked
+                                    potatoes and rice</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Dessert (Select one):</label>
+                            <select name="m4_dessert">
+                                <option value="" disabled selected hidden>Choose a dessert</option>
+                                <option value="House sweet">House sweet</option>
+                                <option value="Fruit Jelly">Fruit Jelly</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item"><label>Drink (Fixed):</label>
+                            <p>Water</p>
+                            <input type="hidden" name="m4_drink" value="Water">
+                        </div>
+
+                        <div class="price-tag"><span>Price: 16,50€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_5" value="Price: 16,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="brasaStandardDetails" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="11_MENU_NAME" value="MENU 1: GROUPS">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Bread, butter and olives</p>
+                            <input type="hidden" name="11a_COUVERT" value="Bread, butter and olives">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>STARTER (Select one):</label>
+                            <select name="11b_STARTER">
+                                <option value="" disabled selected hidden>Choose a starter</option>
+                                <option value="Vegetable soup">Vegetable soup</option>
+                                <option value="Mixed salad">Mixed salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="11c_MAIN">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Codfish with cream">Codfish with cream</option>
+                                <option value="Codfish à Brás">Codfish “à Brás”</option>
+                                <option value="Roast pork leg with fries">Roast pork leg with fries</option>
+                                <option value="Portuguese-style pork">Portuguese-style pork</option>
+                                <option value="Vegetable rice">Vegetarian Option: Vegetable rice</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DESSERT (Select one):</label>
+                            <select name="11d_DESSERT">
+                                <option value="" disabled selected hidden>Choose a dessert</option>
+                                <option value="Chocolate mousse">Chocolate mousse</option>
+                                <option value="Crème brûlée">Crème brûlée</option>
+                                <option value="Camel’s slobber (Baba de Camelo)">Camel’s slobber (Baba de Camelo)
+                                </option>
+                                <option value="Profiteroles">Profiteroles</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drinks(Fixed):</label>
+                            <p>Water and 1 drink (white or red house wine, beer, or soft drink) + coffee</p>
+                            <input type="hidden" name="11e_DRINKS"
+                                value="Water and 1 drink (white or red house wine, beer, or soft drink) + coffee">
+                        </div>
+
+                        <div class="price-tag">
+                            <span>Price: 25,00€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" name="11z_PVP" value="25,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="corkMenu1Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="CORK_M1_NAME" value="THE CORK: MENU 1">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Bread, butter and olives</p>
+                            <input type="hidden" name="cork_m1_a_COUVERT" value="Bread, butter and olives">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Starter (Fixed):</label>
+                            <p>Fresh salad to share (1 per 4 guests)</p>
+                            <input type="hidden" name="cork_m1_b_STARTER" value="Fresh salad to share (1 per 4 guests)">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="cork_m1_c_MAIN">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Seabass fillet on a bed of spinach and sautéed potatoes">Seabass fillet
+                                    on a bed of spinach and sautéed potatoes</option>
+                                <option
+                                    value="Sliced pork “secretos” with garlic and parsley sauce, served with mashed potatoes">
+                                    Sliced pork
+                                    “secretos” with garlic and parsley sauce, served with mashed potatoes</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Dessert (Fixed):</label>
+                            <p>Pudding</p>
+                            <input type="hidden" name="cork_m1_d_DESSERT" value="Pudding">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drinks (Fixed):</label>
+                            <p>Water + soft drink or glass of red or white wine</p>
+                            <input type="hidden" name="cork_m1_e_DRINKS"
+                                value="Water + soft drink or glass of red or white wine">
+                        </div>
+
+                        <div class="price-tag">
+                            <span>Price: 27,00€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" name="cork_m1_z_PVP" value="27,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="corkMenu2Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="CORK_M2_NAME" value="THE CORK: MENU 2">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Bread, olive butter, shrimp croquette “à Guilho”</p>
+                            <input type="hidden" name="cork_m2_a_COUVERT"
+                                value="Bread, olive butter, shrimp croquette à Guilho">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Starter (Fixed):</label>
+                            <p>Chestnut soup</p>
+                            <input type="hidden" name="cork_m2_b_STARTER" value="Chestnut soup">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="cork_m2_c_MAIN">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Bacalhau à Lagareiro (traditional roasted cod)">“Bacalhau à Lagareiro”
+                                    (traditional roasted cod with olive oil and potatoes)</option>
+                                <option value="Carolino da Terra (stewed carolino rice with pork ribs)">“Carolino da
+                                    Terra” – Stewed carolino rice with black pork ribs, chouriço and red wine</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Dessert (Fixed):</label>
+                            <p>Chocolate Mousse</p>
+                            <input type="hidden" name="cork_m2_d_DESSERT" value="Chocolate Mousse">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drinks (Fixed):</label>
+                            <p>Water + soft drink or glass of red or white wine</p>
+                            <input type="hidden" name="cork_m2_e_DRINKS"
+                                value="Water + soft drink or glass of red or white wine">
+                        </div>
+
+                        <div class="price-tag">
+                            <span>Price: 33,00€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" name="cork_m2_z_PVP" value="33,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="avoMenu1Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="avo_m1_NAME" value="CASA DA AVÓ: MENU 1">-->
+
+                        <div class="menu-detail-item"><label>Starter (Fixed):</label>
+                            <p>Mixed Salad</p>
+                            <input type="hidden" name="avo_m1_STARTER" value="Mixed Salad">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Main Course (Choose Rice Type):</label>
+                            <select name="avo_m1_rice">
+                                <option value="" disabled selected hidden>Choose rice for the codfish pastries</option>
+                                <option value="2 Codfish pastries with Tomato Rice">2 Codfish pastries with Tomato Rice
+                                </option>
+                                <option value="2 Codfish pastries with Bean Rice">2 Codfish pastries with Bean Rice
+                                </option>
+                                <option value="2 Codfish pastries with Sprouts Rice">2 Codfish pastries with Sprouts
+                                    Rice</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item"><label>Dessert (Fixed):</label>
+                            <p>Chocolate mousse</p>
+                            <input type="hidden" name="avo_m1_DESSERT" value="Chocolate mousse">
+                        </div>
+
+                        <div class="menu-detail-item"><label>Drinks (Fixed):</label>
+                            <p>Water or soft drink or glass of red or white wine or beer</p>
+                            <input type="hidden" name="avo_m1_DRINKS"
+                                value="Water or soft drink or glass of red or white wine or beer">
+                        </div>
+
+                        <div class="price-tag"><span>Price: 18,50€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_6" value="Price: 18,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="avoMenu2Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="avo_m2_NAME" value="CASA DA AVÓ: MENU 2">-->
+
+                        <div class="menu-detail-item"><label>Starter (Fixed):</label>
+                            <p>“Avó Celeste” Soup</p>
+                            <input type="hidden" name="avo_m2_STARTER" value="Avó Celeste Soup">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Main Course:</label>
+                            <select name="avo_m2_main">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Codfish with cream">Codfish with cream</option>
+                                <option value="Codfish à Brás">Codfish “à Brás”</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Dessert:</label>
+                            <select name="avo_m2_dessert">
+                                <option value="" disabled selected hidden>Choose a dessert</option>
+                                <option value="Rice pudding">Rice pudding</option>
+                                <option value="Chocolate mousse">Chocolate mousse</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item"><label>Drinks (Fixed):</label>
+                            <p>Water or soft drink or glass of red or white wine or beer</p>
+                            <input type="hidden" name="avo_m2_DRINKS"
+                                value="Water or soft drink or glass of red or white wine or beer">
+                        </div>
+
+                        <div class="price-tag"><span>Price: 20,50€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_1" value="Price: 20,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="avoTasting1Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="avo_t1_NAME" value="CASA DA AVÓ: TASTING 1">-->
+
+                        <div class="menu-detail-item"><label>Tasting (Fixed):</label>
+                            <p>Small Codfish pastry</p>
+                            <input type="hidden" name="avo_t1_FIXED" value="Small Codfish pastry">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="avo_t1_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Coffee">Coffee</option>
+                                <option value="Port Wine">Port Wine</option>
+                                <option value="Ginjinha">Cherry liqueur “Ginjinha”</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 7,00€</span>
+                            <input type="hidden" name="price_7" value="Price: 7,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="avoTasting2Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="avo_t2_NAME" value="CASA DA AVÓ: TASTING 2">-->
+
+                        <div class="menu-detail-item"><label>Tasting (Fixed):</label>
+                            <p>Large Codfish pastry (Premium)</p>
+                            <input type="hidden" name="avo_t2_FIXED" value="Large Codfish pastry (Premium)">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="avo_t2_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Coffee">Coffee</option>
+                                <option value="Port Wine">Port Wine</option>
+                                <option value="Ginjinha">Cherry liqueur “Ginjinha”</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 9,50€</span>
+                            <input type="hidden" name="price_8" value="Price: 9,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="avoTasting3Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="avo_t3_NAME" value="CASA DA AVÓ: TASTING 3">-->
+
+                        <div class="menu-detail-item"><label>Tasting (Fixed):</label>
+                            <p>Large Codfish pastry stuffed with cheese (Premium)</p>
+                            <input type="hidden" name="avo_t3_FIXED"
+                                value="Large Codfish pastry stuffed with cheese (Premium)">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="avo_t3_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Coffee">Coffee</option>
+                                <option value="Port Wine">Port Wine</option>
+                                <option value="Ginjinha">Cherry liqueur “Ginjinha”</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 10,50€</span>
+                            <input type="hidden" name="price_9" value="Price: 10,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="cucinaStandardDetails" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="11_MENU_NAME" value="CUCINA DI FAMIGLIA: MENU 1">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Bread, butter and olives</p>
+                            <input type="hidden" name="11a_COUVERT" value="Bread, butter and olives">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>STARTER (Select one):</label>
+                            <select name="11b_STARTER">
+                                <option value="" disabled selected hidden>Choose a starter</option>
+                                <option value="Vegetable soup">Vegetable soup</option>
+                                <option value="Mixed salad">Mixed salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="11c_MAIN">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Codfish with cream">Codfish with cream</option>
+                                <option value="Hake fillets with tomato rice and salad">Hake fillets with tomato rice
+                                    and salad</option>
+                                <option value="Roasted chicken with fries and salad">Roasted chicken with fries and
+                                    salad</option>
+                                <option value="Pork loin with roasted potatoes and rice">Pork loin with roasted potatoes
+                                    and rice</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DESSERT (Select one):</label>
+                            <select name="11d_DESSERT">
+                                <option value="" disabled selected hidden>Choose a dessert</option>
+                                <option value="Chocolate mousse">Chocolate mousse</option>
+                                <option value="Fruit salad">Fruit salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drinks (Fixed):</label>
+                            <p>Water + soft drink or glass of red, white, rose or green wine</p>
+                            <input type="hidden" name="11e_DRINKS"
+                                value="Water + soft drink or glass of red, white, rose or green wine">
+                        </div>
+
+                        <div class="price-tag">
+                            <span>Price: 22,50€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" name="11z_PVP" value="22,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="clanMenu1Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="clan_m1_NAME" value="EL CLAN: MENU 1 LISBOA">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Mini toasts, herb cream cheese, seasoned green olives</p>
+                            <input type="hidden" name="clan_m1_a_COUVERT"
+                                value="Mini toasts, herb cream cheese, seasoned green olives">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="clan_m1_main">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Monkfish rice with saffron, green and red peppers, white and red onions">
+                                    Monkfish rice with saffron, green and red peppers, white and red onions</option>
+                                <option value="Chicken curry">Chicken curry</option>
+                                <option value="Vegetable rice (carrots, courgettes, green and red peppers)">Vegetarian
+                                    Option: vegetable rice (carrots, courgettes, green and red peppers)</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DESSERT (Fixed):</label>
+                            <p>Two rings of churros with dulce de leche</p>
+                            <input type="hidden" name="clan_m1_b_DESSERT"
+                                value="Two rings of churros with dulce de leche">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DRINKS (Fixed):</label>
+                            <p>Soft drink or water or lemonade</p>
+                            <input type="hidden" name="clan_m1_c_DRINKS" value="Soft drink or water or lemonade">
+                        </div>
+
+                        <div class="price-tag">
+                            <span>Price: 23,00€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" name="clan_m1_z_PVP" value="23,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="clanMenu2Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="clan_m2_NAME" value="EL CLAN: MENU 2 PORTUGAL">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Mini toasts, herb cream cheese, seasoned green olives</p>
+                            <input type="hidden" name="clan_m2_a_COUVERT"
+                                value="Mini toasts, herb cream cheese, seasoned green olives">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>STARTER (Fixed):</label>
+                            <p>Vegetable soup</p>
+                            <input type="hidden" name="clan_m2_b_STARTER" value="Vegetable soup">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="clan_m2_main">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Monkfish rice with saffron, green and red peppers, white and red onions">
+                                    Monkfish rice with saffron, green and red peppers, white
+                                    and red onions</option>
+                                <option value="Chicken curry">Chicken curry</option>
+                                <option value="Vegetable rice (carrots, courgettes, green and red peppers)">Vegetarian
+                                    Option: vegetable rice (carrots,
+                                    courgettes, green and red peppers)</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DESSERT (Fixed):</label>
+                            <p>Two rings of churros with dulce de leche</p>
+                            <input type="hidden" name="clan_m2_c_DESSERT"
+                                value="Two rings of churros with dulce de leche">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DRINKS & COFFEE (Fixed):</label>
+                            <p>A glass of house wine or a mug of local beer or soft drinks or water or sparkling or
+                                tonic water or homemade lemonade + One coffee
+                            </p>
+                            <input type="hidden" name="clan_m2_d_DRINKS"
+                                value="Glass of house wine, mug of local beer, soft drinks, water, sparkling/tonic water, homemade lemonade + 1 coffee">
+                        </div>
+
+                        <div class="price-tag">
+                            <span>Price: 25,00€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" name="clan_m2_z_PVP" value="25,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="nataMenu1Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="nata_m1_NAME" value="NATA DE LISBOA: TASTING 1">-->
+
+                        <div class="menu-detail-item">
+                            <label>Tasting (Fixed):</label>
+                            <p>Pastel De Nata + Coffee</p>
+                            <input type="hidden" name="nata_m1_SWEET" value="Pastel De Nata">
+                            <input type="hidden" name="nata_m1_DRINK" value="Coffee">
+                        </div>
+                        <div class="price-tag"><span>Price: 3,00€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_10" value="Price: 3,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="nataMenu2Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="nata_m2_NAME" value="NATA DE LISBOA: TASTING 2">-->
+
+                        <div class="menu-detail-item">
+                            <label>Sweet (Fixed):</label>
+                            <p>Pastel De Nata</p>
+                            <input type="hidden" name="nata_m2_SWEET" value="Pastel De Nata">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="nata_m2_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Coffee">Coffee</option>
+                                <option value="Port Wine">Port Wine</option>
+                                <option value="Ginjinha">Cherry liqueur “Ginjinha”</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 4,50€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_11" value="Price: 4,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="nataMenu3Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="nata_m3_NAME" value="NATA DE LISBOA: TASTING 3">-->
+
+                        <div class="menu-detail-item">
+                            <label>Pastel De Nata Flavor:</label>
+                            <select name="nata_m3_flavor">
+                                <option value="" disabled selected hidden>Choose a flavor</option>
+                                <option value="Pastel De Nata Nutella">Nutella</option>
+                                <option value="Pastel De Nata Apple">Apple</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="nata_m3_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Coffee">Coffee</option>
+                                <option value="Port Wine">Port Wine</option>
+                                <option value="Ginjinha">Cherry liqueur “Ginjinha”</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 5,50€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_12" value="Price: 5,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="nicolaMenuDetails" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="nicola_MENU_NAME" value="NICOLA CAFÉ: MENU 1">-->
+
+                        <div class="menu-detail-item">
+                            <label>Couvert (Fixed):</label>
+                            <p>Bread, olives, butter, pâtés and snacks</p>
+                            <input type="hidden" name="11a_COUVERT" value="Bread, olives, butter, pâtés and snacks">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>STARTER (Select one):</label>
+                            <select name="11b_STARTER">
+                                <option value="" disabled selected hidden>Choose a starter</option>
+                                <option value="Vegetable soup">Vegetable soup</option>
+                                <option value="Mixed salad">Mixed salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>MAIN COURSE (Select one):</label>
+                            <select name="11c_MAIN">
+                                <option value="" disabled selected hidden>Choose a main course</option>
+                                <option value="Hake fillets with clam rice">Hake fillets with clam rice</option>
+                                <option value="Perch fillets with tomato rice">Perch fillets with tomato rice</option>
+                                <option value="Codfish à Brás">Codfish “à Brás”</option>
+                                <option value="Veal steaks in Madeira wine with potatoes and sautéed vegetables">Veal
+                                    steaks in Madeira wine with potatoes
+                                    and sautéed vegetables</option>
+                                <option value="Alentejo-style pork">Alentejo-style pork</option>
+                                <option value="Turkey steaks with Nicola sauce">Turkey steaks with Nicola sauce</option>
+                                <option value="Vegetable rice">Vegetarian: Vegetable rice</option>
+                                <option value="Funghi risotto with vegetables">Vegetarian: Funghi risotto with
+                                    vegetables</option>
+                                <option value="Tomato salad buffalo cheese">Vegetarian: Tomato salad with buffalo
+                                    cheese</option>
+                                <option value="Pasta with vegetables">Vegetarian: Pasta with vegetables</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>DESSERT (Select one):</label>
+                            <select name="11d_DESSERT">
+                                <option value="" disabled selected hidden>Choose a dessert</option>
+                                <option value="Sweet rice">Sweet rice</option>
+                                <option value="Fruit salad">Fruit salad</option>
+                            </select>
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drinks (Fixed):</label>
+                            <p>Water and 1 drink (beer, soda, white or red wine)</p>
+                            <input type="hidden" name="11e_DRINKS"
+                                value="Water and 1 drink (beer, soda, white or red wine)">
+                        </div>
+
+                        <div class="price-tag">
+                            <span>Price: 31,00€</span>
+                            <small>Per person (VAT included)</small>
+                            <input type="hidden" name="11z_PVP" value="31,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="pataMenu1Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="pata_m1_NAME" value="PATA NEGRA: TASTING 1">-->
+
+                        <div class="menu-detail-item">
+                            <label>Savory (Fixed):</label>
+                            <p>Selection of Pata Negra Ham and Bread</p>
+                            <input type="hidden" name="pata_m1_SAVORY" value="Selection of Pata Negra Ham and Bread">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="pata_m1_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Red Wine">Red Wine</option>
+                                <option value="White Wine">White Wine</option>
+                                <option value="Beer">Beer</option>
+                                <option value="Soft Drink">Soft Drink</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 10,50€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_13" value="Price: 10,50€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="pataMenu2Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="pata_m2_NAME" value="PATA NEGRA: TASTING 2">-->
+
+                        <div class="menu-detail-item">
+                            <label>Savory (Fixed):</label>
+                            <p>Platter of Cheese, Ham, Bread and Regional Sweet</p>
+                            <input type="hidden" name="pata_m2_SAVORY"
+                                value="Platter of Cheese, Ham, Bread and Regional Sweet">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="pata_m2_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Red Wine">Red Wine</option>
+                                <option value="White Wine">White Wine</option>
+                                <option value="Beer">Beer</option>
+                                <option value="Soft Drink">Soft Drink</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 13,00€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_14" value="Price: 13,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="pataMenu3Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="pata_m3_NAME" value="PATA NEGRA: TASTING 3">-->
+
+                        <div class="menu-detail-item">
+                            <label>Savory (Fixed):</label>
+                            <p>Pata Negra and Paio ham and Bread</p>
+                            <input type="hidden" name="pata_m3_SAVORY" value="Pata Negra and Paio ham and Bread">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink Option:</label>
+                            <select name="pata_m3_drink">
+                                <option value="" disabled selected hidden>Choose your drink</option>
+                                <option value="Red Wine">Red Wine</option>
+                                <option value="White Wine">White Wine</option>
+                                <option value="Beer">Beer</option>
+                                <option value="Soft Drink">Soft Drink</option>
+                            </select>
+                        </div>
+                        <div class="price-tag"><span>Price: 14,00€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_15" value="Price: 14,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+                    <div id="pataMenu4Details" class="menu-details-container full-width">
+                        <!--<input type="hidden" name="pata_m4_NAME" value="PATA NEGRA: TASTING 4">-->
+
+                        <div class="menu-detail-item">
+                            <label>Savory (Fixed):</label>
+                            <p>Cheese Board</p>
+                            <input type="hidden" name="pata_m4_SAVORY" value="Cheese Board">
+                        </div>
+
+                        <div class="menu-detail-item">
+                            <label>Drink (Fixed):</label>
+                            <p>4 Port Wine Tasting (Brandy, Tawny, Ruby and 10-Year-Old Port)</p>
+                            <input type="hidden" name="pata_m4_DRINK"
+                                value="4 Port Wine Tasting (Brandy, Tawny, Ruby and 10-Year-Old Port)">
+                        </div>
+                        <div class="price-tag"><span>Price: 17,00€</span><small>Per person (VAT included)</small>
+                            <input type="hidden" name="price_16" value="Price: 17,00€ Per person (VAT included)">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group full-width" style="margin-top: 20px;">
+                        <label>ALLERGIES & REQUIREMENTS:</label>
+                        <textarea name="12_ALLERGIES_REQUIREMENTS" rows="3"
+                            placeholder="Food allergies, wheelchair access, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Reservation Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>

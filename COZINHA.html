@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinha d’Avó Celeste | Restaurante para Grupos na Rua Augusta</title>
+    <meta name="description"
+        content="Cozinha tradicional e pastéis de bacalhau desde 1904. Menus para grupos na Rua Augusta, Lisboa. Restaurante auténtico para grupos grandes y eventos. Traditional group dining and authentic Portuguese flavors.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+
+            <div class="image-container">
+                <img src="fotos_cozinha/cozinha1.jpeg" alt="COZINHA D’AVÓ CELESTE RESTAURANT">
+            </div>
+
+            <div class="description">
+                <h1>COZINHA D’AVÓ CELESTE</h1>
+                <p>A cozy restaurant celebrating Portuguese comfort food and family recipes. Known for its codfish
+                    specialties and the famous “Avó Celeste Soup”, it offers authentic menus inspired by homemade
+                    cuisine. Great for groups seeking a traditional and relaxed experience.</p>
+                <h3>CAPACITY & SPACES</h3>
+                <p>Dining Room: ≈70 Pax</p>
+                <h3>GROUP MENUS</h3>
+                <p>Customizable group menus with starter, main course, dessert and drinks included.</p>
+                <p>Food & Wine Tasting Menus.</p>
+
+            </div>
+
+        </div>
+
+        <!-- MENUS + CONDITIONS -->
+        <div class="menu-conditions">
+
+            <div class="box">
+                <h2 class="section-title">Menus</h2>
+                <div class="slider" id="menuSlider">
+                    <div class="slides">
+
+                        <!-- MENU 1 -->
+                        <div class="slide">
+                            <h3>MENU 1</h3>
+                            <p><strong>Starter:</strong> Mixed Salad.</p>
+                            <p><strong>MAIN COURSE:</strong></p>
+                            <p>2 large codfish pastries with rice (tomato, beans, or sprouts).</p>
+                            <p><strong>Dessert:</strong></p>
+                            <p>Chocolate mousse.</p>
+                            <p><strong>DRINKS:</strong> 1 drink per person.</p>
+                            <p><strong>Price:</strong> €18.50</p>
+                        </div>
+                        <!-- MENU 2 -->
+                        <div class="slide">
+                            <h3>MENU 2</h3>
+                            <p><strong>Starter:</strong> “Avó Celeste” Soup.</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>Codfish with cream .</p>
+                            <p>Codfish “à Brás”.</p>
+                            <p><strong>Dessert (choose one):</strong></p>
+                            <p>Rice pudding.</p>
+                            <p>Chocolate mousse.</p>
+                            <p><strong>DRINKS:</strong> 1 drink per person.</p>
+                            <p><strong>Price:</strong> €20.50</p>
+                        </div>
+                        <!-- MENU 3 TASTING -->
+                        <div class="slide">
+                            <h3>MENU 3 TASTING</h3>
+                            <p><strong>Savory:</strong> Small Codfish pastry.</p>
+                            <p><strong>DRINKS:</strong> Coffee or Port Wine or Cherry liqueur “Ginjinha”.</p>
+                            <p><strong>Price:</strong> €7.00</p>
+                        </div>
+                        <!-- MENU 4 TASTING -->
+                        <div class="slide">
+                            <h3>MENU 4 TASTING</h3>
+                            <p><strong>Savory:</strong> Large Codfish pastry (Premium).</p>
+                            <p><strong>DRINKS:</strong> Coffee or Port Wine or Cherry liqueur “Ginjinha”.</p>
+                            <p><strong>Price:</strong> €9.50</p>
+                        </div>
+                        <!-- MENU 5 TASTING -->
+                        <div class="slide">
+                            <h3>MENU 5 TASTING</h3>
+                            <p><strong>Savory:</strong> Large Codfish pastry stuffed with cheese (Premium).</p>
+                            <p><strong>DRINKS:</strong> Coffee or Port Wine or Cherry liqueur “Ginjinha”.</p>
+                            <p><strong>Price:</strong> €10.50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="moveSlide(-1, 'menuSlider')">Prev</button>
+                    <button onclick="moveSlide(1, 'menuSlider')">Next</button>
+                </div>
+            </div>
+
+            <!-- CONDITIONS -->
+            <div class="box">
+                <h2 class="section-title">Conditions</h2>
+                <p>Valid for groups with minimum 15 pax.</p>
+                <p>Series price for 20 groups/year.</p>
+                <p>Same menu for whole group (except dietary restrictions).</p>
+                <p>Extras available at additional cost.</p>
+                <p>All prices include VAT.</p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- GALLERY -->
+        <div class="box">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder para fotos faltantes -->
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span>
+        </div>
+
+    </div>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>

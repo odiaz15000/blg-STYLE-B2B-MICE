@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Nicola 1787 | Grupos Históricos no Rossio | Group Dining</title>
+    <meta name="description"
+        content="Restaurante histórico de 1787 na Praça do Rossio. Menus para grupos em ambiente Art Déco. Cocina tradicional portuguesa, cenas de gala y grupos. Historic group dining and cultural landmark in Lisbon.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+
+            <div class="image-container">
+                <img src="fotos_nicola/nicola1.jpg" alt="NICOLA CAFÉ RESTAURANT">
+            </div>
+
+            <div class="description">
+                <h1>NICOLA CAFÉ</h1>
+                <p>A historic café in the heart of Lisbon’s Rossio Square, known for its literary heritage and elegant
+                    Belle Époque style. Offers traditional Portuguese cuisine and exclusive Fado dinners in a private
+                    setting.</p>
+                <h3>CAPACITY & SPACES</h3>
+                <p>Private Room: ≈40 Pax</p>
+                <h3>GROUP MENUS</h3>
+                <p>Customizable group menus with starter, main course, dessert and drinks included.</p>
+                <h3>ADD-ON SERVICES</h3>
+                <p>Fado Performance</p>
+                <p>Exclusive room reservation</p>
+            </div>
+
+        </div>
+
+        <!-- MENUS + CONDITIONS -->
+        <div class="menu-conditions">
+
+            <div class="box">
+                <h2 class="section-title">Menus</h2>
+                <div class="slider" id="menuSlider">
+                    <div class="slides">
+
+                        <!-- MENU 1 GROUPS -->
+                        <div class="slide">
+                            <h3>MENU 1 GROUPS</h3>
+                            <p><strong>Couvert:</strong> Bread, olives, butter, pâtés and snacks.</p>
+                            <p><strong>Starter (choose one):</strong> Vegetable soup or mixed salad.</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>Hake fillets with clam rice.</p>
+                            <p>Perch fillets with tomato rice.</p>
+                            <p>Codfish “à Brás”.</p>
+                            <p>Veal steaks in Madeira wine with potatoes and sautéed vegetables.</p>
+                            <p>Alentejo-style pork.</p>
+                            <p>Turkey steaks with Nicola sauce.</p>
+                            <p>Vegetarian Option 1: Vegetable rice.</p>
+                            <p>Vegetarian Option 2: Funghi risotto with vegetables.</p>
+                            <p>Vegetarian Option 3: Tomato salad with buffalo cheese.</p>
+                            <p>Vegetarian Option 4: Pasta with vegetables.</p>
+                            <p><strong>Dessert (choose one):</strong></p>
+                            <p>Sweet rice.</p>
+                            <p>Fruit salad.</p>
+                            <p><strong>DRINKS:</strong> Water and 1 drink (beer, soda, white or red wine).</p>
+                            <p><strong>Price:</strong> €31</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="moveSlide(-1, 'menuSlider')">Prev</button>
+                    <button onclick="moveSlide(1, 'menuSlider')">Next</button>
+                </div>
+            </div>
+
+            <!-- CONDITIONS -->
+            <div class="box">
+                <h2 class="section-title">Conditions</h2>
+                <p>Valid for groups with minimum 15 pax.</p>
+                <p>Series price for 20 groups/year.</p>
+                <p>Same menu for whole group (except dietary restrictions).</p>
+                <p>Extras available at additional cost.</p>
+                <p>All prices include VAT.</p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- GALLERY -->
+        <div class="box">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder para fotos faltantes -->
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span>
+        </div>
+
+    </div>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>

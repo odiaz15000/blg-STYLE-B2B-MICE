@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Clan | Restaurante para Grupos em Lisboa | Group Dining & Fusion</title>
+    <meta name="description"
+        content="Cozinha tradicional e fusão para grupos no centro de Lisboa. Bacalhau, sardinhas e pratos para partilhar. Menus para grupos grandes y eventos. Vibrant group dining and Portuguese fusion in Lisbon.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+
+            <div class="image-container">
+                <img src="fotos_clan/clan1.png" alt="EL CLAN RESTAURANT">
+            </div>
+
+            <div class="description">
+                <h1>EL CLAN</h1>
+                <p>A vibrant restaurant blending Portuguese and Latin-inspired dishes. Offers menus with options like
+                    monkfish rice, chicken curry, and churros. Ideal for casual group meals in a modern atmosphere with
+                    a friendly, upbeat vibe.</p>
+                <h3>CAPACITY & SPACES</h3>
+                <p>Dining Hall: ≈70 Pax</p>
+                <h3>GROUP MENUS</h3>
+                <p>Customizable group menus with starter, main course, dessert and drinks included.</p>
+            </div>
+
+        </div>
+
+        <!-- MENUS + CONDITIONS -->
+        <div class="menu-conditions">
+
+            <div class="box">
+                <h2 class="section-title">Menus</h2>
+                <div class="slider" id="menuSlider">
+                    <div class="slides">
+
+                        <!-- MENU 1 -->
+                        <div class="slide">
+                            <h3>MENU 1 LISBOA</h3>
+                            <p><strong>Couvert:</strong> Mini toasts, herb cream cheese, seasoned green olives.</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>Monkfish rice with saffron, green and red peppers, white and red onions.</p>
+                            <p>Chicken curry.</p>
+                            <p>Vegetarian Option: vegetable rice (carrots, courgettes, green and red peppers).</p>
+                            <p><strong>Dessert:</strong></p>
+                            <p>Two rings of churros with dulce de leche.</p>
+                            <p><strong>DRINKS: </strong>1 Soft drink, water or lemonade.</p>
+                            <p><strong>Price:</strong> €23.00</p>
+                        </div>
+                        <!-- MENU 2 -->
+                        <div class="slide">
+                            <h3>MENU 2 PORTUGAL</h3>
+                            <p><strong>Couvert:</strong> Mini toasts, herb cream cheese, seasoned green olives.</p>
+                            <p><strong>Starter:</strong> Vegetable soup.</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>Monkfish rice with saffron, green and red peppers, white and red onions.</p>
+                            <p>Chicken curry.</p>
+                            <p>Vegetarian Option: vegetable rice (carrots, courgettes, green and red peppers).</p>
+                            <p><strong>Dessert:</strong></p>
+                            <p>Two rings of churros with dulce de leche.</p>
+                            <p><strong>DRINKS: </strong>A glass of house wine or a mug of local beer or 1 soft drink or
+                                regular water or sparkling or tonic water or homemade lemonade + One coffee.</p>
+                            <p><strong>Price:</strong> €25.00</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="moveSlide(-1, 'menuSlider')">Prev</button>
+                    <button onclick="moveSlide(1, 'menuSlider')">Next</button>
+                </div>
+            </div>
+
+            <!-- CONDITIONS -->
+            <div class="box">
+                <h2 class="section-title">Conditions</h2>
+                <p>Valid for groups with minimum 15 pax.</p>
+                <p>Series price for 20 groups/year.</p>
+                <p>Same menu for whole group (except dietary restrictions).</p>
+                <p>Extras available at additional cost.</p>
+                <p>All prices include VAT.</p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- GALLERY -->
+        <div class="box">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder para fotos faltantes -->
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span>
+        </div>
+
+    </div>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>

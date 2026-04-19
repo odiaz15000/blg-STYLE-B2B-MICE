@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pata Negra | Steakhouse & Tapas para Grupos em Lisboa | Group Dining</title>
+    <meta name="description"
+        content="Steakhouse e petiscos portugueses para grupos no centro de Lisboa. Carnes na brasa, picanha e tapas. Menus para grupos grandes y eventos. Grilled meats, seafood, and group bookings in Lisbon.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+
+            <div class="image-container">
+                <img src="fotos_pata/pata1.png" alt="PATA NEGRA - STEAKHOUSE RESTAURANT">
+            </div>
+
+            <div class="description">
+                <h1>PATA NEGRA - STEAKHOUSE</h1>
+                <p>Specializes in Iberian ham, cheese boards, and Port wine tastings. A relaxed and cozy venue for food
+                    & wine lovers. Ideal for small groups looking for authentic flavors, wine pairings, or informal
+                    gatherings in the city center.</p>
+                <h3>CAPACITY & SPACES</h3>
+                <p>Flexible, depending on configuration.</p>
+            </div>
+
+        </div>
+
+        <!-- MENUS + CONDITIONS -->
+        <div class="menu-conditions">
+
+            <div class="box">
+                <h2 class="section-title">Menus</h2>
+                <div class="slider" id="menuSlider">
+                    <div class="slides">
+                        <!-- MENU 1 TASTING -->
+                        <div class="slide">
+                            <h3>MENU 1 TASTING</h3>
+                            <p><strong>Savory:</strong> Selection of Pata Negra Ham, Bread.</p>
+                            <p><strong>DRINKS (choose one):</strong> Wine – red or white or beer or soft drink.</p>
+                            <p><strong>Price:</strong> €10.50</p>
+                        </div>
+                        <!-- MENU 2 TASTING -->
+                        <div class="slide">
+                            <h3>MENU 2 TASTING</h3>
+                            <p><strong>Savory:</strong> Platter of Cheese, Ham, Bread and Regional Sweet.</p>
+                            <p><strong>DRINKS (choose one):</strong> Wine – red or white or beer or soft drink.</p>
+                            <p><strong>Price:</strong> €13.00</p>
+                        </div>
+                        <!-- MENU 3 TASTING -->
+                        <div class="slide">
+                            <h3>MENU 3 TASTING</h3>
+                            <p><strong>Savory:</strong> Pata Negra and Paio ham, Bread.</p>
+                            <p><strong>DRINKS (choose one):</strong> Wine – red or white or beer or soft drink.</p>
+                            <p><strong>Price:</strong> €14.00</p>
+                        </div>
+                        <!-- MENU 4 TASTING -->
+                        <div class="slide">
+                            <h3>MENU 4 TASTING</h3>
+                            <p><strong>Savory:</strong> Cheese Board.</p>
+                            <p><strong>DRINKS:</strong> 4 Port Wine Tasting (Brandy, Tawny, Ruby and 10-Year-Old Port).
+                            </p>
+                            <p><strong>Price:</strong> €17.00</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="moveSlide(-1, 'menuSlider')">Prev</button>
+                    <button onclick="moveSlide(1, 'menuSlider')">Next</button>
+                </div>
+            </div>
+
+            <!-- CONDITIONS -->
+            <div class="box">
+                <h2 class="section-title">Conditions</h2>
+                <p>Valid for groups with minimum 15 pax.</p>
+                <p>Series price for 20 groups/year.</p>
+                <p>All prices include VAT.</p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- GALLERY -->
+        <div class="box">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder para fotos faltantes -->
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span>
+        </div>
+
+    </div>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa D'Ouro | Restaurante para Grupos na Rua Augusta | Group Dining</title>
+    <meta name="description"
+        content="Especialistas em carnes na brasa e menus para grupos na Rua Augusta, Lisboa. Parrillada, mariscos y cenas para grupos grandes. Steakhouse, seafood, and group bookings in Lisbon center.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <script src="scripts.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+
+            <div class="image-container">
+                <img src="fotos_brasa/brasa1.png" alt="BRASA D'OURO RESTAURANT">
+            </div>
+
+            <div class="description">
+                <h1>BRASA D'OURO</h1>
+                <p>A seafood and Portuguese cuisine landmark in Lisbon. Located on the city’s most famous pedestrian
+                    street, it serves fresh fish, codfish dishes, and classic desserts in a spacious and elegant
+                    setting, perfect for large group meals in the heart of the Baixa.</p>
+                <h3>CAPACITY & SPACES</h3>
+                <p>Dining Hall: ≈120 Pax</p>
+                <h3>GROUP MENUS</h3>
+                <p>Customizable group menus with starter, main course, dessert and drinks included.</p>
+                <h3>ADD-ON SERVICES</h3>
+                <p>Fado Performance</p>
+                <p>Exclusive room reservation</p>
+            </div>
+
+        </div>
+
+        <!-- MENUS + CONDITIONS -->
+        <div class="menu-conditions">
+
+            <div class="box">
+                <h2 class="section-title">Menus</h2>
+                <div class="slider" id="menuSlider">
+                    <div class="slides">
+
+                        <!-- MENU 1 GROUPS -->
+                        <div class="slide">
+                            <h3>MENU 1 GROUPS</h3>
+                            <p><strong>Couvert:</strong> Bread, butter and olives.</p>
+                            <p><strong>Starter (choose one):</strong> Vegetable soup or mixed salad.</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>Codfish with cream.</p>
+                            <p>Codfish “à Brás”.</p>
+                            <p>Roast pork leg with fries.</p>
+                            <p>Portuguese-style pork.</p>
+                            <p>Vegetarian Option: vegetable rice.</p>
+                            <p><strong>Dessert (choose one):</strong></p>
+                            <p>Chocolate mousse..</p>
+                            <p>Crème brûlée.</p>
+                            <p>Camel’s slobber.</p>
+                            <p>Profiteroles.</p>
+                            <p><strong>DRINKS:</strong> Water + 1 drink (white or red house wine, beer, or soft drink) +
+                                coffee.</p>
+                            <p><strong>Price:</strong> €25</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="moveSlide(-1, 'menuSlider')">Prev</button>
+                    <button onclick="moveSlide(1, 'menuSlider')">Next</button>
+                </div>
+            </div>
+
+            <!-- CONDITIONS -->
+            <div class="box">
+                <h2 class="section-title">Conditions</h2>
+                <p>Valid for groups with minimum 15 pax.</p>
+                <p>Series price for 20 groups/year.</p>
+                <p>Same menu for whole group (except dietary restrictions).</p>
+                <p>Extras available at additional cost.</p>
+                <p>All prices include VAT.</p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- GALLERY -->
+        <div class="box">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder para fotos faltantes -->
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span>
+        </div>
+
+    </div>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>

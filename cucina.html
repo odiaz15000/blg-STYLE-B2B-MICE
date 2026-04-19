@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cucina di Famiglia | Restaurante Italiano para Grupos em Lisboa</title>
+    <meta name="description"
+        content="Cozinha italiana e pratos para partilhar no centro de Lisboa. Menus para grupos, pizzas e pastas. Restaurante italiano para grupos grandes y eventos. Family-style Italian group dining in Lisbon.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logos/baixa_blanco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="universal-navbar"></nav>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+
+            <div class="image-container">
+                <img src="fotos_cucina/cucina1.png" alt="CUCINA DI FAMIGLIA RESTAURANT">
+            </div>
+
+            <div class="description">
+                <h1>CUCINA DI FAMIGLIA</h1>
+                <p>Located in the heart of Lisbon’s Baixa district, Cucina di Famiglia offers a warm and welcoming
+                    atmosphere where Mediterranean flavours meet comfort and conviviality. A versatile restaurant ideal
+                    for groups, casual meals, or relaxed dining experiences, perfect for who want to feel at home while
+                    discovering the taste of Lisbon.</p>
+                <h3>CAPACITY & SPACES</h3>
+                <p>Dining Room: ≈25 Pax</p>
+                <h3>GROUP MENUS</h3>
+                <p>Customizable group menus with starter, main course, dessert and drinks included.</p>
+            </div>
+
+        </div>
+
+        <!-- MENUS + CONDITIONS -->
+        <div class="menu-conditions">
+
+            <div class="box">
+                <h2 class="section-title">Menus</h2>
+                <div class="slider" id="menuSlider">
+                    <div class="slides">
+
+                        <!-- MENU 1 -->
+                        <div class="slide">
+                            <h3>MENU 1</h3>
+                            <p><strong>Couvert:</strong> Bread, butter and olives.</p>
+                            <p><strong>Starter (choose one):</strong> Vegetable soup or mixed salad.</p>
+                            <p><strong>MAIN COURSE (choose one):</strong></p>
+                            <p>Codfish with cream.</p>
+                            <p>Hake fillets with tomato rice and salad.</p>
+                            <p>Roasted chicken with fries and salad.</p>
+                            <p>Pork loin with roasted potatoes and rice.</p>
+                            <p><strong>Dessert (choose one):</strong></p>
+                            <p>Chocolate mousse or fruit salad.</p>
+                            <p><strong>DRINKS:</strong> 1 drink per person.</p>
+                            <p><strong>Price:</strong> €22.50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="moveSlide(-1, 'menuSlider')">Prev</button>
+                    <button onclick="moveSlide(1, 'menuSlider')">Next</button>
+                </div>
+            </div>
+
+            <!-- CONDITIONS -->
+            <div class="box">
+                <h2 class="section-title">Conditions</h2>
+                <p>Valid for groups with minimum 15 pax.</p>
+                <p>Series price for 20 groups/year.</p>
+                <p>Same menu for whole group (except dietary restrictions).</p>
+                <p>Extras available at additional cost.</p>
+                <p>All prices include VAT.</p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- GALLERY -->
+        <div class="box">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder para fotos faltantes -->
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+                <div class="gallery-item placeholder">FOTO</div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next">&#10095;</span>
+        </div>
+
+    </div>
+    <footer id="universal-footer" class="main-footer reveal delay-3"></footer>
+</body>
+
+</html>
