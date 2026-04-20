@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://odiaz15000.github.io/baixa-lisbon-group-catalog/sitemap.xml
+Disallow: /
